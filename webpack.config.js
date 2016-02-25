@@ -10,7 +10,10 @@ const basePlugins = [
     __PRODUCTION__: process.env.NODE_ENV === 'production',
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
   }),
-  new webpack.optimize.CommonsChunkPlugin('vendor', '[name].[hash].bundle.js'),
+  new webpack.optimize.CommonsChunkPlugin({
+    name: 'vendor',
+    filename: '[name].[hash].bundle.js'
+  }),
   new HtmlWebpackPlugin({
     template: './app/index.html',
     inject: 'body',
