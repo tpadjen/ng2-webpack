@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Angular2 webpack starter",
   "scripts": {
-    "postinstall": "npm run typings && npm run build",
+    "start": "npm run dev",
+    "postinstall": "npm run typings",
     "typings": "rimraf typings && typings install",
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
     "clean": "rimraf dist",
@@ -29,6 +30,7 @@
     "typescript": "^1.8.2",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1",
     "zone.js": "^0.5.15"
   },
   "engines": {

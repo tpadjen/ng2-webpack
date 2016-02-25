@@ -36,7 +36,7 @@ const plugins = basePlugins
 module.exports = {
 
   entry: {
-    app: './app/app.ts',
+    app: './app/main.ts',
     vendor: [
       'es6-shim',
       'angular2/bundles/angular2-polyfills',

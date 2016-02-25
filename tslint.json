@@ -28,7 +28,7 @@
     "no-eval": true,
     "no-shadowed-variable": true,
     "no-string-literal": true,
-    "no-switch-cas-fall-through": true,
+    "no-switch-case-fall-through": true,
     "trailing-comma": false,
     "no-trailing-whitespace": false,
     "no-unused-expression": true,
