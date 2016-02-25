@@ -1,0 +1,49 @@
+{
+  "name": "ng2-webpack",
+  "version": "0.0.1",
+  "description": "Angular2 webpack starter",
+  "scripts": {
+    "postinstall": "npm run typings && npm run build",
+    "typings": "rimraf typings && typings install",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "cross-env NODE_ENV=production webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint './app/**/*.ts'"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "angular2": "^2.0.0-beta.7",
+    "css-loader": "^0.23.1",
+    "es6-shim": "^0.33.3",
+    "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.9.0",
+    "raw-loader": "^0.5.1",
+    "reflect-metadata": "^0.1.2",
+    "rimraf": "^2.5.2",
+    "rxjs": "^5.0.0-beta.2",
+    "ts-loader": "^0.8.1",
+    "tslint": "^3.5.0",
+    "tslint-loader": "^2.1.0",
+    "typescript": "^1.8.2",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.14",
+    "zone.js": "^0.5.15"
+  },
+  "engines": {
+    "node": "4.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/tpadjen/ng2-webpack.git"
+  },
+  "bugs": {
+    "url": "http://github.com/tpadjen/ng2-webpack/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "angular2",
+    "webpack"
+  ]
+}
