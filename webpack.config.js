@@ -74,8 +74,9 @@ module.exports = {
     ],
     loaders: [
       { test: /\.ts$/,                      loader: 'ts',    exclude: /node_modules/ },
-      { test: /\.html$/,                    loader: 'raw' },
-      { test: /\.css$/,                     loader: 'css' },
+      { test: /\.html$/,                    loader: 'to-string!raw' },
+      { test: /\.css$/,                     loader: 'to-string!css' },
+      { test: /\.scss$/,                    loader: 'to-string!css!sass' },
       { test: /\.(svg|eot|woff|woff2|ttf)/, loader: 'url' },
       { test: /\.(jpeg|jpg|png|gif)/,       loader: 'url' }
     ],

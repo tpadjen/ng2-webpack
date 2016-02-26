@@ -1,6 +1,5 @@
 node_modules/
 dist
-typings/*
-!typings/main.d.ts
+typings
 
 *.log
