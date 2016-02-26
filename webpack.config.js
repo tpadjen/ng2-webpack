@@ -15,7 +15,7 @@ const basePlugins = [
     filename: '[name].[hash].bundle.js'
   }),
   new HtmlWebpackPlugin({
-    template: './app/index.html',
+    template: './src/index.html',
     inject: 'body',
     minify: false
   })
@@ -39,7 +39,7 @@ const plugins = basePlugins
 module.exports = {
 
   entry: {
-    app: './app/main.ts',
+    app: './src/main.ts',
     vendor: [
       'es6-shim',
       'angular2/bundles/angular2-polyfills',
