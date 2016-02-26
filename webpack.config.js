@@ -3,6 +3,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const basePlugins = [
   new webpack.DefinePlugin({
@@ -29,7 +30,14 @@ const prodPlugins = [
     compress: {
       warnings: false
     }
-  })
+  }),
+  // static assets
+  new CopyWebpackPlugin([
+    {
+      from: 'src/assets',
+      to: 'assets'
+    }
+  ]),
 ];
 
 const plugins = basePlugins
