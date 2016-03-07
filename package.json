@@ -10,7 +10,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --open --content-base src/",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
-    "build": "cross-env NODE_ENV=production webpack",
+    "build": "cross-env NODE_ENV=production webpack --progress --profile --display-error-details --display-cached",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint './app/**/*.ts'"
   },
