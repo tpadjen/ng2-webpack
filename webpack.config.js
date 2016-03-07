@@ -30,14 +30,14 @@ const prodPlugins = [
     compress: {
       warnings: false
     }
-  }),
+  })
   // static assets
-  new CopyWebpackPlugin([
-    {
-      from: 'src/assets',
-      to: 'assets'
-    }
-  ]),
+  // new CopyWebpackPlugin([
+  //   {
+  //     from: 'src/assets',
+  //     to: 'assets'
+  //   }
+  // ]),
 ];
 
 const plugins = basePlugins
@@ -82,11 +82,11 @@ module.exports = {
     ],
     loaders: [
       { test: /\.ts$/,                      loader: 'ts',    exclude: /node_modules/ },
-      { test: /\.html$/,                    loader: 'to-string!raw' },
+      { test: /\.html$/,                    loader: 'html' },
       { test: /\.css$/,                     loader: 'to-string!css' },
       { test: /\.scss$/,                    loader: 'to-string!css!sass' },
       { test: /\.(svg|eot|woff|woff2|ttf)/, loader: 'url' },
-      { test: /\.(jpeg|jpg|png|gif)/,       loader: 'url' }
+      { test: /\.(jpeg|jpg|png|gif)/,       loader: 'file?name=[path][name].[ext]&attrs=img:src link:href' }
     ],
     noParse: [ /zone\.js\/dist\/.+/, /angular2\/bundles\/.+/ ]
   }
