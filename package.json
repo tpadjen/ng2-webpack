@@ -16,7 +16,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "angular2": "^2.0.0-beta.7",
+    "angular2": "2.0.0-beta.8",
     "chalk": "^1.1.1",
     "copy-webpack-plugin": "^1.1.1",
     "css-loader": "^0.23.1",
